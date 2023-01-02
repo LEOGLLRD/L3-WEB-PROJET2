@@ -1,0 +1,46 @@
+.container{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 200px;
+    margin-top: 20px;
+
+}
+.approved{
+    color:green;
+    font-size: 20px;
+}
+.nonApproved{
+    color:red;
+    font-size: 20px;
+}
+.card{
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+
+.cardImg{
+    width: 100%;
+    margin-left: -20px;
+    border: solid 1px black;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+
+}
+.astuce{
+    min-height: 70px;
+    margin-top: 30px;
+    border: solid 1px black;
+}
+
+
+@media (max-width: 800px) {
+
+.card { grid-template-columns: repeat(2, 1fr); }
+
+}

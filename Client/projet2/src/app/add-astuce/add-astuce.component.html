@@ -1,0 +1,44 @@
+
+  <div id="login-box">
+    <div class="flex-item-left">
+      <h1>Ajouter une annonce</h1>
+      <form [formGroup]="addAstuceForm" #AddAstuce = "ngForm" (ngSubmit) = "addAstuceMethod(AddAstuce.value)"> 
+      <input type="text" name="TitreAst" formControlName="TitreAst" placeholder="Titre de l'astuce"ngModel required />
+      <br>
+      <div *ngIf="TitreAst!.invalid && TitreAst!.touched"><span class="error" >TitreAst invalid</span><br></div>
+      
+  
+      <input type="text" name="Tags" formControlName="Tags"placeholder="Tags" ngModel required/>
+      <br>
+      <div *ngIf="Tags!.invalid && Tags!.touched" > <span class="error" >Tags invalid</span><br></div>
+      
+      
+      <input type="text" name="ObjectInfo" formControlName="ObjectInfo" placeholder="ObjectInfo" ngModel required/>
+      <br>
+      <div *ngIf="ObjectInfo!.invalid && ObjectInfo!.touched"><span class="error" >ObjectInfo invalid</span><br></div>
+      
+  
+      <input type="text" name="ImgInfo"formControlName="ImgInfo" placeholder="ImgInfo" ngModel required/> 
+      <br>
+      <div *ngIf="ImgInfo!.invalid && ImgInfo!.touched"><span class="error" >ImgInfo	 invalid</span> <br>  </div>
+       
+      <input type="text" name="Astuce"formControlName="Astuce" placeholder="Astuce" ngModel required/> 
+      <br>
+      <div *ngIf="Astuce!.invalid && Astuce!.touched"><span class="error" >Astuce invalid</span> <br>  </div>
+      <!--
+      <input type="file" name="File"formControlName="File" placeholder="image" (change)="onFileSelect($event)"ngModel required/> 
+      <br>
+      <div *ngIf="File!.invalid && File!.touched"><span class="error" >File invalid</span> <br>  </div>
+       --> 
+            
+     
+      <button class="buttonSubmit" type="submit" [disabled] = "AddAstuce.invalid" ><span class="submitSpan">S'inscrire</span></button>
+  
+    </form> 
+  
+    </div>
+    
+  
+  </div>
+  
+  

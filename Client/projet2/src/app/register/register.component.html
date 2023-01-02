@@ -1,0 +1,54 @@
+<ul>
+  <li *ngFor="let user of users">{{user.name}}</li>
+</ul>
+<div id="login-box">
+  <div class="flex-item-left">
+    <h1>S'inscrire</h1>
+    <form [formGroup]="registerForm" #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)"> 
+    <input type="text" name="username" formControlName="username" placeholder="username"ngModel required />
+    <br>
+    <div *ngIf="username!.invalid && username!.touched"><span class="error" >username invalid</span><br></div>
+    
+
+    <input type="text" name="email" formControlName="email"placeholder="E-mail" ngModel required/>
+    <br>
+    <div *ngIf="email!.invalid && email!.touched" > <span class="error" >email invalid</span><br></div>
+    
+    
+    <input type="text" name="name" formControlName="name" placeholder="name" ngModel required/>
+    <br>
+    <div *ngIf="name!.invalid && name!.touched"><span class="error" >name invalid</span><br></div>
+    
+
+    <input type="text" name="lastname"formControlName="lastname" placeholder="lastname" ngModel required/> 
+    <br>
+    <div *ngIf="lastname!.invalid && lastname!.touched"><span class="error" >lastname invalid</span> <br>  </div>
+     
+   
+    <input type="password" name="password" formControlName="password"placeholder="Password" ngModel required/>
+    <br>
+    <div *ngIf="password!.invalid && password!.touched">
+    <span class="error" >Min-lenght : 8</span>
+    <br>
+  </div>
+    
+   
+    <button class="buttonSubmit" type="submit"  [disabled] = "userlogin.invalid"><span class="submitSpan">S'inscrire</span></button>
+
+  </form> 
+
+  </div>
+  
+  <div class="flex-item-right">
+    <h1 class="loginwith">S'inscrire avec :</h1>
+    <br>
+    <button class="social-signin facebook">Log in with facebook</button>
+    <br>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <br>
+    <button class="social-signin google">Log in with Google+</button>
+  </div>
+
+
+</div>
+

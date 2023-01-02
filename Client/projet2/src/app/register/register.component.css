@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+*:focus {
+  outline: none;
+}
+
+input.ng-invalid{
+  border-left: 5px solid red;
+  border-radius: 4px;
+}
+input.ng-valid{
+  border-left: 5px solid green;
+  border-radius: 4px;
+
+
+}
+.error{
+  color:red;
+}
+
+span{
+  font-size: 10px;
+  float:left;
+  margin-left:37px;
+}
+input{
+  border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+#login-box {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  margin: 7% auto;
+  width: 550px;
+  height: auto;
+  min-height: 400px;
+  background: #FFF;
+  border-radius: 15px;
+
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+
+
+.signup_submit {
+float:left;
+width: 200px;
+}
+
+.signup_submit:hover,
+.signup_submit:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.signup_submit:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.buttonSubmit:hover{
+  background: #17c;
+
+}
+
+.buttonSubmit:disabled {
+  background-color: gray;
+  cursor:default;
+}
+
+.buttonSubmit:focus{
+  border-color: #05a;
+
+}
+
+
+
+button.social-signin {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  border-radius:8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  margin-top:20px;
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  border-radius:8px;
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  border-radius:8px;
+  background: #DD4B39;
+}
+.submitSpan{
+  font-size: 15px;
+  margin-left:0px;
+}
+.buttonSubmit{
+
+  margin-top:30px;  
+  background: rgb(1, 29, 51);
+  border-radius: 8px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 5px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-moz-box-shadow: 5px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-webkit-box-shadow: 5px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+
+@media (max-width: 800px) {
+  #login-box {
+    flex-direction: column;
+    margin-bottom: 350px;
+    margin-top:100px;
+    width:80%;
+  }
+  
+  .flex-item-left {
+    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+  }
+  
+  .flex-item-right {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 4px 10px 4px rgba(119, 119, 119, 0.75);
+  -moz-box-shadow: 0px 4px 10px 4px rgba(119, 119, 119, 0.75);
+  -webkit-box-shadow: 0px 4px 10px 4px rgba(119, 119, 119, 0.75);
+  }
+  button.social-signin.facebook{
+    margin-top:0px;
+  }
+ 
+}

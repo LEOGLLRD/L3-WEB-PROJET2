@@ -1,0 +1,28 @@
+<div class="container">
+<div *ngFor="let astuce of astuces">                               
+    <div class="card">
+
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1> {{ astuce.titreAst }} <span *ngIf="astuce.isApproved ;else contenu_pas_bon" class="approved">(approuvé)</span> 
+                  
+                <ng-template #contenu_pas_bon ><span class="nonApproved">(Pas encore approuvé)</span></ng-template>
+             </h1>
+                <img src="https://static1.millenium.org/articles/3/38/75/93/@/1569535-quinn-2-article_image_t-1.jpg" class="cardImg" alt="...">
+                <h4>{{ astuce.tags }}</h4>
+              </div>
+              <div class="col">
+                <p>{{ astuce.objectInfo }}</p>
+                <p>{{ astuce.imgInfo }}</p>
+    <button class="btn btn-primary"(click)="SuppAstuce(astuce.idAstuce)">Supprimer cette annonce {{astuce.idAstuce}}</button>
+              </div>
+              <p class="astuce" >{{ astuce.astuce }}</p>
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+</div>
+

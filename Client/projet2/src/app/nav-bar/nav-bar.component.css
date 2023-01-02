@@ -1,0 +1,165 @@
+.nav {
+    
+    -webkit-box-shadow: -6px 2px 28px 10px #000000; 
+    box-shadow: -6px 2px 28px 10px #000000; 
+    height: 50px;
+    width: 100%;
+    background-color: #776BCC;
+    position:relative;
+    border-bottom-right-radius:13px;
+    border-bottom-left-radius:13px;
+    }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  .adminSpan{
+    font-size: larger;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 100px;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > ul li a{
+    display: block;
+    padding: 0 8px;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    text-decoration: none;
+
+  }
+  .buttonLikea{
+    border:none;
+    display: block;
+    padding: 0 8px;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #776BCC;
+  }
+  .buttonLikea:hover{
+    background-color: #5D54A4;
+      border-radius: 5px;
+  }
+  .nav > .nav-links > ul{
+    padding: 0;
+    margin-top: 5px;
+    list-style: none;
+    position: relative;
+    
+  }
+  .nav > .nav-links > ul li{
+    display: inline-block;
+    background-color: #776BCC;
+    
+    
+  }
+  .nav > .nav-links > ul li:hover{
+      background-color: #5D54A4;
+      border-radius: 5px;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+
+ .nav .nav-links ul a.icon{
+ margin-left: 80px;
+ margin-right: 10px;
+ }
+
+ .nav .nav-links ul a i{
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 7px;
+    margin-left: 5px;
+ }
+
+  
+  @media (max-width:750px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      cursor: pointer;
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #776BCC;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > ul li a {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    /*   */
+
+
+    
+      .nav > .nav-links > ul li{
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+        background-color: #776BCC;
+         
+      }
+     
+
+    /*   */
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+      z-index: 3;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      z-index: 4;
+      width: 100%;
+      height: auto;
+      overflow-y: auto;
+    }
+  }

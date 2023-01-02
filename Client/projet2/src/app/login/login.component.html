@@ -1,0 +1,18 @@
+  <div class="login">
+	<h2 class="login-header">S'identifier</h2>
+	<form [formGroup]="loginForm" #userlogin = "ngForm" class="login-container" (ngSubmit)="login(userlogin.value)">
+		<input type="text" name="username" formControlName="username" placeholder="username"ngModel required />
+		<div *ngIf="username!.invalid && username!.touched"><span class="error" >username invalid</span></div>
+  <br>
+		<input type="password" name="password" formControlName="password"placeholder="Password" ngModel required/>
+		
+		<div *ngIf="password!.invalid && password!.touched">
+		<span>Min-lenght : 8</span>
+	</div>
+		<br>
+  
+	  
+		<input type="submit" [disabled] = "userlogin.invalid" value="Se connecter">
+	  
+	</form>
+  </div>

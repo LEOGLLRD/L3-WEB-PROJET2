@@ -1,0 +1,63 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="event-schedule-area-two bg-color pad100" style="margin-top: 20px;margin-bottom: 40%;">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active show" id="home" role="tabpanel">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <div *ngFor="let profil of profils">                               
+                                    <tr class="inner-box">
+                                        
+                                        <td>
+                                            <div class="event-img">
+                                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="event-wrap">
+                                                <h3><a href="#">{{ profil.name }} <span class="admin"*ngIf="profil.isAdmin">(est un admin)</span></a></h3>
+                                                <span class="Banned"*ngIf="profil.isBanned">Banni</span>
+                                                <div class="meta">
+                                                    <div class="organizers">
+                                                        <a href="#">Lastname: {{ profil.lastname }}</a>
+                                                    </div>
+                                                    <div class="categories">
+                                                        <a href="#">pseudo: {{ profil.pseudo }}</a>
+                                                    </div>
+                                                    <div class="time">
+                                                        <span>email: {{ profil.email }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="r-no">
+                                                    <button *ngIf="!profil.isBanned" class="btn btn-primary ban"(click)="bannedThisUser(profil.idUser)">Bannir cet utilisateur</button>
+                                                    <button *ngIf="profil.isBanned" class="btn btn-primary deban"(click)="unbanThisUser(profil.idUser)">Debannir cet utilisateur</button>
+                                                    &nbsp; &nbsp;
+                                                    <button *ngIf="!profil.isAdmin" class="btn btn-primary deban"(click)="promoteUser(profil.idUser)">Mettre admin cet utilisateur</button>
+                                                    <button *ngIf="profil.isAdmin" class="btn btn-primary ban"(click)="demote(profil.idUser)">retirer cet admin</button>
+
+
+                                            </div>
+                                        </td>
+                                    </div>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <!-- /col end-->
+        </div>
+        <!-- /row end-->
+    </div>
+</div>
+    

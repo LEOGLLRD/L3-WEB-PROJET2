@@ -1,0 +1,39 @@
+<!-- affichage de la barre -->
+<div class="globalContainer">
+<div class="container1">
+  
+    <form [formGroup]="searchForm" #userSearch = "ngForm"  (ngSubmit)="search(userSearch.value)" class="search-bar">
+        <input type="text" placeholder="Rechercher une astuce" name="barre" formControlName="barre">
+        <button type="submit">S</button>
+    </form>
+    <br>
+
+    <div *ngIf="barre!.invalid && barre!.touched"><span class="error" >Recherche invalid</span></div>
+
+    
+    
+</div>
+<div class="container">
+    <div *ngFor="let astuce of astuces">                               
+        <div class="card">
+    
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <h1> {{ astuce.titreAst }} </h1>
+                    <img src="https://static1.millenium.org/articles/3/38/75/93/@/1569535-quinn-2-article_image_t-1.jpg" class="cardImg" alt="...">
+                    <h4>{{ astuce.tags }}</h4>
+                  </div>
+                  <div class="col">
+                    <p>{{ astuce.objectInfo }}</p>
+                    <p>{{ astuce.imgInfo }}</p>
+                  </div>
+                  <p class="astuce" >{{ astuce.astuce }}</p>
+    
+                </div>
+              </div>
+    
+          </div>
+        </div>
+    </div>
+</div>

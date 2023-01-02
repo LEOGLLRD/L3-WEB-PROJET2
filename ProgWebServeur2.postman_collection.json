@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "a65bc2f9-fa96-4812-97b7-d1812698150b",
+		"name": "ProgWebServeur2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24041322"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlIn0sImlhdCI6MTY3MTUzODQwNX0.xZwNqVeTTUOmKQ_3afjr2-31ARTe3hfwi8Atou1ry2c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "leo",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lastname",
+							"value": "gaillard",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "testpassword",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "leoxe",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "leoxe@mail.com",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/signup",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "leo",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "gaillard",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testpassword",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "leoxe",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "leoxe@mail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/astuceAuth/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlIn0sImlhdCI6MTY3MjQxNDQyMywiZXhwIjoxNjcyNDE4MDIzfQ.6hWmoD-igWrQjEfOL6qVay96qOV1A7qP2w9MlMSYEUs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titre",
+							"value": "agqsgZGHBZ",
+							"type": "text"
+						},
+						{
+							"key": "titreImg",
+							"value": "QSEGhgZHZHB",
+							"type": "text"
+						},
+						{
+							"key": "mainImgPath",
+							"value": "DRHQEHJEJR",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "swgsh",
+							"type": "text"
+						},
+						{
+							"key": "objectInfo",
+							"value": "hjkgjkhg",
+							"type": "text"
+						},
+						{
+							"key": "imgInfo",
+							"value": "ZEHJEZH",
+							"type": "text"
+						},
+						{
+							"key": "astuce",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/astuceAuth/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"astuceAuth",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/astuceAuth/manage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlIn0sImlhdCI6MTY3MTcyNDMyMSwiZXhwIjoxNjcxNzI3OTIxfQ.ipauereXkt_BoJiaS2xW5ww_c8-fQAdwLsFo6Mni-qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "delete",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/astuceAuth/adminManage",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"astuceAuth",
+						"adminManage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/commentAuth/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlIn0sImlhdCI6MTY3MjQxNDQyMywiZXhwIjoxNjcyNDE4MDIzfQ.6hWmoD-igWrQjEfOL6qVay96qOV1A7qP2w9MlMSYEUs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "comment",
+							"value": "vbcfhfxj",
+							"type": "text"
+						},
+						{
+							"key": "idAstuce",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/commentAuth/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"commentAuth",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/astuceAuth/nonApprouvedAstuces",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlIn0sImlhdCI6MTY3MjQyNzI2NywiZXhwIjoxNjcyNDMwODY3fQ.KqftECd4cixW0UJHLCIRZaMfXZcDEWtEvdLtNXECZw4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/astuceAuth/nonApprouvedAstuces",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"astuceAuth",
+						"nonApprouvedAstuces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/astuceAuth/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlIn0sImlhdCI6MTY3MTgwMTk3NSwiZXhwIjoxNjcxODA1NTc1fQ.N2-XtEbZSYIyhoU5kH_nlndJcNUSzO3zhZcpOB5avS4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idAstuce",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/astuceAuth/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"astuceAuth",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/modifyProfil",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InBzZXVkbyI6Imxlb3hlNiJ9LCJpYXQiOjE2NzI0MTM4NzEsImV4cCI6MTY3MjQxNzQ3MX0.dF8tQAN8OT47W21RPh0iqpgIm2i48WOR5z6WXvZoYFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "leoxe5",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/user/modifyProfil",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"modifyProfil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/astuce/get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mot",
+							"value": "astuce1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/astuce/get",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"astuce",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

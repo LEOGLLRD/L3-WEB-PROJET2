@@ -1,0 +1,34 @@
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        Projet2
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+        <ul>
+          <li *ngIf="verify && admin != 'true'"><a routerLink="/accueil">Accueil</a></li>
+      <li *ngIf="!verify "><a routerLink="/login">Se connecter</a></li>
+      <li *ngIf ="!verify"><a routerLink="/register">Inscription</a></li>
+      <li *ngIf="verify && admin != 'true'"><a routerLink="/profile-page">Profil</a></li>
+      <li *ngIf="verify && admin != 'true'"><a routerLink="/add-astuce">ajouter une astuce</a></li>
+      <li *ngIf="verify && admin != 'true'"><a routerLink="/my-astuce">Voir ses astuces</a></li>
+      <li *ngIf="verify && admin == 'true'"><a routerLink="/admin">Accueil</a></li>
+
+      <li *ngIf="verify && admin == 'true'"><a routerLink="/astuce-admin">Voir les astuces à valider</a></li>
+      <span *ngIf="admin == 'true'" class="adminSpan">Bienvenu Admin</span>
+      <li *ngIf="verify"><button (click)="logout()" class="buttonLikea">se déconecter</button></li>
+
+      
+      
+        </ul>
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                <span class="font-weight-bold">pseudo recup</span><span class="text-black-50">mail recup</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3 titre">
+                    <h4 class="text-right">Modification profil</h4>
+                </div>
+                
+                <div class="row mt-3">
+                     <form [formGroup]="editProfilForm" #userinfo = "ngForm" (ngSubmit) = "onClickSubmit(userinfo.value)"> 
+                    <!-- Form pour stocker les infos user, qu'on recup dans le ts--> 
+                    <div class="col-md-12"><label class="labels">Nom</label><input  type="text" class="form-control" formControlName="name"name="name" placeholder="entrer un nom" ngModel  /></div>
+
+                    <div *ngIf="name!.invalid && name!.touched"><span class="error" >nom invalid</span></div>
+                    <br>
+
+                    <div class="col-md-12"><label class="labels">Prénom</label><input type="text" class="form-control" formControlName = "lastName"name="lastName" placeholder="entrer un prénom" ngModel /></div>
+
+                    <div *ngIf="lastName!.invalid && lastName!.touched"><span class="error" >Prénom invalid</span></div>
+                    <br>
+
+                    <div class="col-md-12"><label class="labels">Pseudo</label><input type="text" class="form-control" formControlName = "pseudo"name="pseudo" placeholder="entrer un pesudo" ngModel /></div>
+
+                    <div *ngIf="pseudo!.invalid && pseudo!.touched"><span class="error" >pseudo invalid</span></div>
+                    <br>
+
+                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control"  formControlName = "email"name="email" placeholder="entrer un email" ngModel /></div>
+
+                    <div *ngIf="email!.invalid && email!.touched"><span class="error" >email invalid</span></div>
+                    <br>
+
+                    <div class="col-md-12"><label class="labels">Password</label><input type="password" class="form-control"  formControlName = "password"name="password" placeholder="password" ngModel /></div>
+
+                    <div *ngIf="password!.invalid && password!.touched"><span class="error" >Min-length : 8</span></div>
+                    <br>
+
+                    <!-- Au click on exec submit avec le editprofile, et on retoure sur la profile-page--> 
+                    <div class="mt-5 text-center"><button [disabled]="editProfilForm.invalid" class="btn btn-primary profile-button" type="submit"><span>Sauvegarder le profil</span></button></div>
+               
+                 </form>  
+                
+                
+                
+                </div>
+
+                
+            </div>
+
+
+        </div>
+        
+    </div>
+</div>
